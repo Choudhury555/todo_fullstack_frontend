@@ -46,7 +46,7 @@ const Login = () => {
         <form onSubmit={submitHandler}>
           <input type="email" placeholder='Email' required value={email} onChange={(e)=>setEmail(e.target.value)}/>
           <input type="password" placeholder='Password' required value={password} onChange={(e)=>setPassword(e.target.value)}/>
-          <button disabled={loading} type='submit'>Login</button>
+          <button type='submit'>Login</button>
           <h4>Or</h4>
           <Link to="/register">Sign Up</Link>
         </form>
