@@ -11,9 +11,8 @@ const Home = () => {
   const [description,setDescription] = useState("");
   const [taskLoading,setTaskLoading] = useState(false);//this loading is for disabling button/throttling purpose
   const [taskArray,setTaskArray] = useState([]);
-  const [refresh,setRefresh] = useState(false);
 
-  const {isAuthenticated} = useContext(Context);
+  const {isAuthenticated,refresh,setRefresh} = useContext(Context);
 
 
   const updateTaskHandler = async (id) =>{
@@ -93,8 +92,8 @@ const Home = () => {
         <div className='login'>
           <section>
             <form onSubmit={submitHandler}>
-              <input type="test" placeholder='Title' required value={title} onChange={(e)=>setTitle(e.target.value)}/>
-              <input type="test" placeholder='Description' required value={description} onChange={(e)=>setDescription(e.target.value)}/>
+              <input type="text" placeholder='Title' required value={title} onChange={(e)=>setTitle(e.target.value)}/>
+              <input type="text" placeholder='Description' required value={description} onChange={(e)=>setDescription(e.target.value)}/>
               <button disabled={taskLoading} type='submit'>Add Task</button>
             </form>
           </section>
