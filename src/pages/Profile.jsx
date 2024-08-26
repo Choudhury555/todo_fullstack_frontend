@@ -27,9 +27,11 @@ const Profile = () => {
   
   return (
     loading ? <Loader /> :
-    <div>
-      <h1>{userInfo?.name}</h1>
-      <p>{userInfo?.email}</p>
+    <div style={{height:"94vh",width:"100%",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",backgroundColor:"lightblue"}}>
+      <div>
+        <h1>USER NAME : = {userInfo?.name}</h1>
+        <p>USER EMAIL : = {userInfo?.email}</p>
+      </div>
     </div>
   )
 }

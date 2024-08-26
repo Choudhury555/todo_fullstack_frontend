@@ -10,5 +10,9 @@
         @include styledText(0.9rem);
         @include myButton(18.75rem, 1rem);
       }
+
+      p{
+        text-decoration: underline;
+      }
     }
   }

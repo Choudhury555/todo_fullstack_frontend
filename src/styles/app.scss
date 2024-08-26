@@ -65,8 +65,14 @@ a {
   @include styledText;
   @include myButton;
 }
+
+.icon{
+  font-size: 35px;
+  cursor: pointer;
+}
+
 .container {
   @include defaultStyle;
   padding: 5rem 2rem;
-  background-color: $color4;
+  background-color: gray;
 }
