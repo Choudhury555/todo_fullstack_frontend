@@ -21,15 +21,15 @@ const editClick= (id,title,description)=>{
 }
 
   return (
-    <div className='todo'>
+    <div className='todo'  style={{backgroundColor: isCompleted && "lightgreen"}}>
         <div>
             <h4>{title}</h4>
             <p>{description}</p>
         </div>
         <div>
             <input type="checkbox" checked={isCompleted} onChange={()=>updateTaskHandler(id)}/>
-            <button className='btn' onClick={()=>deleteTaskHandler(id)}>DELETE</button>
-            <button className='btn' onClick={()=>editClick(id,title,description)}>EDIT</button>
+            <i className="fa-solid fa-trash-can icon" style={{color:"red"}} onClick={()=>deleteTaskHandler(id)}></i>
+            <i className="fa-solid fa-pen-to-square icon" style={{color:"green"}} onClick={()=>editClick(id,title,description)}></i>
             {editFlag==true && <Edit/>}
         </div>
     </div>

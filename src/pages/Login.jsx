@@ -48,6 +48,8 @@ const Login = () => {
           <input type="password" placeholder='Password' required value={password} onChange={(e)=>setPassword(e.target.value)}/>
           <button type='submit'>Login</button>
           <h4>Or</h4>
+          <Link to="/forgotpassword"><p>Forgot/Change Password</p></Link>
+          <h4>Or</h4>
           <Link to="/register">Sign Up</Link>
         </form>
       </section>

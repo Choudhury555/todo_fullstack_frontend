@@ -8,6 +8,7 @@ import toast, { Toaster } from "react-hot-toast"
 import axios from "axios";
 import { Context, url } from "./main";
 import { useContext, useEffect } from "react";
+import Forgotpassword from "./pages/Forgotpassword";
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/forgotpassword" element={<Forgotpassword/>}/>
       </Routes>
       <Toaster />{/* this is mandatory to use toaster */}
     </Router>
