@@ -1,5 +1,137 @@
 @media (max-width: 900px) {
-    .login {
-      padding: 0;
+  /* Login */
+  .login {
+    padding: 0;
+  }
+
+  /* Container Adjustments */
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  /* Header Adjustments */
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+
+    > div {
+      margin-bottom: 1rem;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    > article {
+      flex-direction: column;
+      gap: 1rem;
+
+      > a {
+        width: 100%;
+      }
     }
   }
+
+  /* Home */
+  .home {
+    .heading {
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+  }
+
+  /* Todo List */
+  .todosContainer {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .todo {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+
+    input {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  /* Button */
+  .btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    width: 70%;
+  }
+
+  /* Loader */
+  .loader {
+    font-size: 1.5rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Header */
+  .header {
+    padding: 0.5rem;
+
+    > div h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  /* Home */
+  .home {
+    .heading {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Todo List */
+  .todosContainer {
+    padding: 0.5rem 0;
+  }
+
+  .todo {
+    padding: 0.5rem;
+
+    input {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+
+  /* Button */
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Loader */
+  .loader {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+  }
+}
+/*This is for the form */
+@media (max-width: 600px) {
+  form {
+    input, button {
+      max-width: 100%;
+    }
+  }
+}
+/* --------------------------------------------- */
+/*     Created with ❤️ by Subash                  */
+/*     Keep coding, keep growing!                */
+/* --------------------------------------------- */

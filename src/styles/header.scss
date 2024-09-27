@@ -1,25 +1,39 @@
 .header {
-    background-color: $color3;
+  background-color: $color3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+
+  > div {
+    h2 {
+      text-transform: uppercase;
+      color: $color2;
+      font-weight: 600; 
+      font-size: 1.5rem; 
+    }
+  }
+
+  > article {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 3rem;
-    width: 100%;
-    > div {
-      h2 {
-        text-transform: uppercase;
-        color: $color2;
-        font-weight: 400;
-      }
-    }
-  
-    > article {
-      display: flex;
-      align-items: center;
-      text-align: center;
-      > a {
-        @include styledText;
-        @include myButton;
+    text-align: center;
+
+    > a, .btn {
+      @include styledText(0.9rem); 
+      @include myButton(8rem, 0.5rem); 
+      margin-left: 1rem; 
+      background: linear-gradient(135deg, #3498db, #8e44ad); //  gradient from google
+      border-radius: 5px; 
+      color: #fff; 
+
+      // Hover effect
+      &:hover {
+        background: darken(#3498db, 10%); 
+        color: #fff; 
       }
     }
   }
+}
