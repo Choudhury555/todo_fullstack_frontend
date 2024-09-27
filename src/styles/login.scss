@@ -1,18 +1,36 @@
 .login > section {
-    @include container(900px, unset, 2rem);
-    min-height: 80%;
-    background-color: $color2;
-    > form {
-      @include flexBox(column, center, flex-start, 2rem);
-      @include inputs;
-  
-      button {
-        @include styledText(0.9rem);
-        @include myButton(18.75rem, 1rem);
+  @include container(900px, unset, 2rem);
+  min-height: 80%;
+  background-color: $color2;
+
+  > form {
+    @include flexBox(column, center, flex-start, 2rem);
+    @include inputs;
+
+    button {
+      // Move these declarations above the nested rules to avoid the deprecation warning
+      @include styledText(0.9rem);
+      @include myButton(18.75rem, 1rem);
+      background: linear-gradient(135deg, #3498db, #8e44ad);
+      border-radius: 5px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      transition: all 0.3s ease;
+
+      // Now keep the hover and active states below
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
       }
 
-      p{
-        text-decoration: underline;
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       }
     }
+
+    p {
+      text-decoration: underline;
+    }
   }
+}
